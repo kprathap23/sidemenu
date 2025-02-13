@@ -1,0 +1,24 @@
+<!-- Show loading spinner -->
+<div class="d-flex justify-content-center align-items-center" *ngIf="isLoading">
+  <div class="spinner-border text-primary" role="status">
+    <span class="visually-hidden">Loading...</span>
+  </div>
+</div>
+
+<!-- Show "No Records" if not loading and no products -->
+<div class="text-center" *ngIf="!isLoading && products.length === 0">
+  <p class="text-muted">No records found.</p>
+</div>
+
+<!-- Show products if not loading and products are available -->
+<div class="row" *ngIf="!isLoading && products.length > 0">
+  <div class="col-sm-6 col-md-4 col-lg-3 mb-4" *ngFor="let product of products">
+    <div class="card h-100">
+      <img [src]="product.thumbnail" class="card-img-top" [alt]="product.title" />
+      <div class="card-body text-center">
+        <h5 class="card-title">{{ product.title }}</h5>
+        <p class="card-text text-muted">{{ product.price | currency }}</p>
+      </div>
+    </div>
+  </div>
+</div>

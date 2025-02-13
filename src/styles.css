@@ -1,1 +1,66 @@
-/* You can add global styles to this file, and also import other style files */
+.container {
+  padding-top: 10px;
+}
+
+.list-group-item {
+  cursor: pointer;
+}
+
+.card img {
+  object-fit: cover;
+  height: 150px;
+}
+
+.card-title {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.card-text {
+  font-size: 0.9rem;
+}
+
+
+.spinner-border {
+  width: 3rem;
+  height: 3rem;
+}
+
+.text-muted {
+  font-size: 1.2rem;
+  margin-top: 20px;
+}
+
+.text-center {
+  padding: 20px;
+}
+
+
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.nav-link {
+  font-size: 1rem;
+  margin-right: 10px;
+}
+
+.nav-link.active {
+  font-weight: bold;
+  color: #007bff !important;
+}
+
+
+
+/* Style for Navbar Links */
+.navbar-nav {
+  gap: 10px; /* Adds spacing between menu items */
+}
+
+
+.navbar-nav .nav-link.active {
+  font-weight: bold;
+  color: #007bff !important;
+  text-decoration: underline;
+}

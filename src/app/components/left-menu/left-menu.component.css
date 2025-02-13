@@ -1,0 +1,28 @@
+
+
+/* Horizontal scroll for mobile */
+.custom-scroll {
+    display: flex; /* Use flexbox for layout */
+    flex-wrap: nowrap; /* Prevent wrapping */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    overflow-y: hidden; /* Disable vertical scrolling */
+    gap: 10px; /* Add spacing between items */
+    padding: 10px; /* Add padding for better visibility */
+  }
+  
+  /* Ensure buttons do not shrink */
+  .custom-scroll .list-group-item {
+    flex: 0 0 auto; /* Prevent items from shrinking */
+    white-space: nowrap; /* Keep text on a single line */
+  }
+  
+  /* Vertical layout for larger screens */
+  @media (min-width: 992px) {
+    .custom-scroll {
+      flex-direction: column; /* Stack items vertically */
+      overflow-x: hidden; /* Disable horizontal scrolling */
+      overflow-y: auto; /* Enable vertical scrolling */
+      gap: 0; /* Remove gaps between items */
+    }
+  }
+  

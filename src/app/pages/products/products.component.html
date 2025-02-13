@@ -1,0 +1,12 @@
+<div class="container mt-1">
+    <div class="row">
+        <div class="col-md-3">
+            <app-left-menu [selectedCategory]="selectedCategory" (categorySelected)="onCategorySelected($event)">
+            </app-left-menu>
+        </div>
+        <div class="col-md-9">
+            <app-product-grid [products]="products" [isLoading]="isLoading">
+            </app-product-grid>
+        </div>
+    </div>
+</div>
